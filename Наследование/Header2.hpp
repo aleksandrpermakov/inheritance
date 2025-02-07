@@ -1,0 +1,42 @@
+#pragma once
+#pragma once
+
+#ifndef Header2.hpp
+#define Header2.hpp
+#include <iostream>
+#include <string>
+using namespace std;
+#include "Header.hpp"
+#include <random>
+
+
+class Plant
+{
+public:
+	Plant();
+	Plant(string name, double height)
+		:name_(name),
+		height_(height)
+	{
+		static std::mt19937 gen{ std::random_device()() };
+		static  std::uniform_int_distribution<int> provaider(10, 99);
+		harvest_ = provaider(gen);
+	}
+	virtual ~Plant() = default;
+
+	virtual Harvest* DoHarvest();
+
+
+private:
+	string name_;
+	double height_;
+	int harvest_;
+}
+
+
+
+
+
+
+
+#endif // !Header2.hpp
