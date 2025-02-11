@@ -16,10 +16,10 @@ public:
 		weigth_(weigth)
 	{}
 	virtual ~Harvest() = default;
-	double Volume()const;
+	double GetVolume()const;
 
-	double Weigth()const { return weigth_; }
-	string Name() const;
+	double GetWeigth()const { return weigth_; }
+	string GetName() const;
 	/*Harvest::~Harvest()
 	{
 	}*/

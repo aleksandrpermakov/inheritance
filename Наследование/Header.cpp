@@ -6,11 +6,11 @@ std::ostream& operator<<(std::ostream& out, const Harvest& obj)
         " Weigth: " << obj.weigth_;
 }
 
-double Harvest::Volume() const
+double Harvest::GetVolume() const
 {
     return volume_;
 }
-string Harvest::Name()const
+string Harvest::GetName()const
 {
     return name_;
 }
