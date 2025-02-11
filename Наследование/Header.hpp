@@ -9,15 +9,16 @@ using namespace std;
 class Harvest
 {
 public:
-	Harvest(string name, double volume, double weigth)
+	Harvest(string name, string color, double weigth)
 
 		:name_(name),
-		volume_(volume),
+		color_(color),
 		weigth_(weigth)
+	
 	{}
 	virtual ~Harvest() = default;
-	double GetVolume()const;
 
+	string GetColor()const;
 	double GetWeigth()const { return weigth_; }
 	string GetName() const;
 	/*Harvest::~Harvest()
@@ -27,9 +28,11 @@ public:
 private:
 
 	string name_;
-	double volume_;
+	string color_;
 	double weigth_;
 }
+
+
 
 
 

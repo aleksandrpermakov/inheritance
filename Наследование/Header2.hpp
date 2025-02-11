@@ -5,10 +5,10 @@
 #define Header2.hpp
 #include <iostream>
 #include <string>
-using namespace std;
+
 #include "Header.hpp"
 #include <random>
-
+using namespace std;
 //Cоздать базовые классы для растений(Plants) и плодов(Harvest) Класс плода должен
 //предоставлять возможность пользователю :
 //узнавать своё название(задаётся при создании)
@@ -36,7 +36,15 @@ private:
 	string name_;
 	double height_;
 	int harvest_;
-}
+};
+
+class PlantName : public Plant
+{
+public:
+	Harvest* DoHarvest() override;
+private:
+
+};
 
 
 

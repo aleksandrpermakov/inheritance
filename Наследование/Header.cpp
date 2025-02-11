@@ -2,15 +2,17 @@
 
 std::ostream& operator<<(std::ostream& out, const Harvest& obj)
 {
-    return out << obj.name_ << " Volume: " << obj.volume_ <<
+    return out << obj.name_ << " Color: " << obj.color_ <<
         " Weigth: " << obj.weigth_;
 }
 
-double Harvest::GetVolume() const
+string Harvest::GetColor() const
 {
-    return volume_;
+    return color_;
 }
 string Harvest::GetName()const
 {
     return name_;
 }
+
+
