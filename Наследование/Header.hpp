@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 
-class Harvest
+class Harvest //Урожай
 {
 public:
 	Harvest(string name, string color, double weigth)
@@ -14,23 +14,21 @@ public:
 		:name_(name),
 		color_(color),
 		weigth_(weigth)
-	
+
 	{}
 	virtual ~Harvest() = default;
 
 	string GetColor()const;
 	double GetWeigth()const { return weigth_; }
 	string GetName() const;
-	/*Harvest::~Harvest()
-	{
-	}*/
-	friend std::ostream &operator << (std::ostream &out, const Harvest& obj);
+
+	friend std::ostream& operator << (std::ostream& out, const Harvest& obj);
 private:
 
 	string name_;
 	string color_;
-	double weigth_;
-}
+	double weigth_; //масса
+};
 
 
 

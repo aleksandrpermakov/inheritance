@@ -18,10 +18,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Header.cpp">
+    <ClCompile Include="Урожай.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Header2.cpp">
+    <ClCompile Include="Растение.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

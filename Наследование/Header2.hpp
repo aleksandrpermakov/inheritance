@@ -15,7 +15,7 @@ using namespace std;
 //узнавать свой вес и цвет(также можно задать при создании)
 
 
-class Plant
+class Plant //–астени€
 {
 public:
 	Plant();
@@ -23,26 +23,48 @@ public:
 		:name_(name),
 		height_(height)
 	{
-		static std::mt19937 gen{ std::random_device()() };
+		static std::mt19937 gen{ std::random_device()() }; //генерирует урожай от 10 до  99 
 		static  std::uniform_int_distribution<int> provaider(10, 99);
 		harvest_ = provaider(gen);
 	}
 	virtual ~Plant() = default;
-
-	virtual Harvest* DoHarvest();
+	int getHarvest() { return harvest_; }
+	virtual Harvest* DoHarvest(); //получить 1 плод с растени€
+	double GetHeight (){ return height_; }
 
 
 private:
 	string name_;
-	double height_;
-	int harvest_;
+	double height_; //высота
+	int harvest_; //количество плодов
 };
 
-class PlantName : public Plant
+class Raspberry : public Plant
 {
 public:
-	Harvest* DoHarvest() override;
+	Raspberry(string name,double height,int age) : Plant (name,height)
+	{
+		age = age_;
+	}
+	int getAge() { return age_; }
+	Harvest* DoHarvest() override
+	{
+
+		if (harvest_ > 0)
+		{
+			harvest_ -= 1;
+			return new Harvest("Harvest_", "Red", 0.1);
+		}
+		else
+		{
+			return nullptr;
+		}
+	}
+
 private:
+	int age_;
+	int harvest_;
+	
 
 };
 

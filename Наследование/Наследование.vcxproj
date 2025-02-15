@@ -127,8 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Header.cpp" />
-    <ClCompile Include="Header2.cpp" />
+    <ClCompile Include="Урожай.cpp" />
+    <ClCompile Include="Растение.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
