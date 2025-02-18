@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef Header.hpp
-#define Header.hpp
+#ifndef Header_hpp
+#define Header_hpp
 #include <iostream>
 #include <string>
 using namespace std;
@@ -29,6 +29,21 @@ private:
 	string color_;
 	double weigth_; //масса
 };
+class Fetus :public Harvest//плод
+{
+public:
+	Fetus() = default;
+	Fetus(string name, string color, double weigth) :Harvest(name, color, weigth)
+	{}
+	~Fetus() = default;
+	void Print()
+	{
+		cout << "Name: " << this->GetName() << '\n' << "Color: " << this->GetColor() << '\n' << "Weigth: " << this->GetWeigth() << '\n';
+	}
+
+private:
+
+};
 
 
 
@@ -41,4 +56,6 @@ private:
 
 
 
-#endif // !Header.hpp
+
+
+#endif // !Header_hpp

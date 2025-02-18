@@ -7,9 +7,14 @@ int main()
 	setlocale(LC_ALL, "rus");
 
 	Plant bush("bush", 1.5);
-	Harvest raspberry("raspberry", "red", 0.2);
-	raspberry.GetName();
+	Harvest raspberr("raspberry", "red", 0.2);
+	raspberr.GetName();
 	bush.DoHarvest();
+
+	
+	Fetus raspberry("raspberry", "red", 0.1);
+	raspberry.Print();
+
 		
 		
 

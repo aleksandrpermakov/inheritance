@@ -1,8 +1,8 @@
 #pragma once
 #pragma once
 
-#ifndef Header2.hpp
-#define Header2.hpp
+#ifndef Header2_hpp
+#define Header2_hpp
 #include <iostream>
 #include <string>
 
@@ -39,11 +39,12 @@ private:
 	int harvest_; //количество плодов
 };
 
-class Raspberry : public Plant
+class Raspberry : public Plant //класс малина
 {
 public:
 	Raspberry(string name,double height,int age) : Plant (name,height)
 	{
+		
 		age = age_;
 	}
 	int getAge() { return age_; }
@@ -53,13 +54,16 @@ public:
 		if (harvest_ > 0)
 		{
 			harvest_ -= 1;
-			return new Harvest("Harvest_", "Red", 0.1);
+			return new Fetus("Harvest_", "Red", 0.1);
 		}
 		else
 		{
 			return nullptr;
 		}
+
 	}
+	
+
 
 private:
 	int age_;
@@ -74,4 +78,4 @@ private:
 
 
 
-#endif // !Header2.hpp
+#endif // !Header2_hpp
